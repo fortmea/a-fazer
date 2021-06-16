@@ -33,7 +33,7 @@ function App() {
             </button>
           </div>
         </div>
-        <div class="row row-cols-2">
+        <div className="row row-cols-2">
           <TarefasComponent></TarefasComponent>
           </div>
         <div className="col-12">
