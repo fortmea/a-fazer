@@ -6,11 +6,11 @@ export default class ClassificadoComponent extends React.Component {
         this.state = {
             response: []
         }
-        const requestOptions = {
+
+        fetch('https://lista-tarefa.herokuapp.com/listar', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' }
-        };
-        fetch('https://lista-tarefa.herokuapp.com/listar', requestOptions)
+        })
             .then(response => response.json())
             .then(data => this.setState({ response: data['data'] }));
 
