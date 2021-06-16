@@ -1,6 +1,6 @@
 {
-  "short_name": "challenge",
-  "name": "Spedy Dev challenge",
+  "short_name": "tarefas",
+  "name": "Lista de tarefas à fazer",
   "icons": [
     {
       "src": "favicon.ico",
