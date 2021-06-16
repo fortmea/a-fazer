@@ -8,6 +8,7 @@ export default class ClassificadoComponent extends React.Component {
         }
 
         fetch('https://lista-tarefa.herokuapp.com/listar', {
+            mode: "cors",
             method: 'POST',
             headers: { 'Content-Type': 'application/json' }
         })
@@ -18,6 +19,7 @@ export default class ClassificadoComponent extends React.Component {
     delete(id) {
         const requestOptions = {
             method: 'POST',
+            mode: "cors",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: id })
         };
