@@ -9,7 +9,7 @@ export default class ContagemComponent extends React.Component {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' }
         };
-        fetch('http://localhost:3001/listar', requestOptions)
+        fetch('https://lista-tarefa.herokuapp.com/listar', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({ response: data['data'] }));
     }

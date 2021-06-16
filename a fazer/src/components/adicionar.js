@@ -15,7 +15,7 @@ export default class Adicionar extends Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ titulo: titulo, descricao: descricao })
         };
-        fetch('http://localhost:3001/adicionar/', requestOptions).then(response => response.json())
+        fetch('https://lista-tarefa.herokuapp.com/adicionar/', requestOptions).then(response => response.json())
             .then(data => this.setState({ error: data.error }));
         window.location.reload(false);
         return;

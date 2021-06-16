@@ -10,7 +10,7 @@ export default class ClassificadoComponent extends React.Component {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' }
         };
-        fetch('http://localhost:3001/listar', requestOptions)
+        fetch('https://lista-tarefa.herokuapp.com/listar', requestOptions)
             .then(response => response.json())
             .then(data => this.setState({ response: data['data'] }));
 
@@ -21,28 +21,11 @@ export default class ClassificadoComponent extends React.Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ id: id })
         };
-        fetch('http://localhost:3001/deletar/', requestOptions).then(response => response.json())
+        fetch('https://lista-tarefa.herokuapp.com/deletar/', requestOptions).then(response => response.json())
             .then(data => this.setState({ error: data.error }));
         window.location.reload(false);
         return;
     }
-    ndata(datao) {
-        let data = new Date(datao);
-        data.setSeconds(0, 0);
-        var stamp = data.toUTCString().replace("GMT", "");
-        stamp = stamp.replace("Fri", "");
-        stamp = stamp.replace("Sat", "");
-        stamp = stamp.replace("Thu", "");
-        stamp = stamp.replace("Mon", "");
-        stamp = stamp.replace("Tue", "");
-        stamp = stamp.replace("Wed", "");
-        stamp = stamp.replace("Sun", "");
-        stamp = stamp.replace(",", "");
-        stamp = stamp.replace(":00", "");
-        //stamp = stamp.replace("00:00", "");
-        return stamp;
-    }
-    
     render() {
         return (
             this.state.response.map((tarefa, index) => (
