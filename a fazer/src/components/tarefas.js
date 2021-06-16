@@ -29,8 +29,8 @@ export default class ClassificadoComponent extends React.Component {
     render() {
         return (
             this.state.response.map((tarefa, index) => (
-                <div className="col-6">
-                    < div className="card bg-light border-primary text-dark mb-3" key={index} >
+                <div className="col-6" key={index}>
+                    < div className="card bg-light border-primary text-dark mb-3"  >
                         <div className="card-header border-primary">
                             {tarefa.TITULO}
                         </div>
