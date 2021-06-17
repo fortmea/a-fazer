@@ -16,7 +16,7 @@ export default class ContagemComponent extends React.Component {
     render() {
         if (Object.keys(this.state.response).length > 0) {
             return (
-                <div className="alert border-primary"><b>Tarefas registradas: {Object.keys(this.state.response).length}</b></div>
+                <div className="alert border-light"><b>Tarefas registradas: {Object.keys(this.state.response).length}</b></div>
             )
         } else {
             return (
